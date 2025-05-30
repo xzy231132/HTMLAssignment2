@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Killian's Dynamic Webpage</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- below code provides a quick transition to ease into the color for smoothness-->
+        <style>
+            body {
+                transition: background-color 0.5s ease;
+                color: white; 
+            }
+        </style>
+        <script>
+            <!-- very simple, just reads the time of day on website load and picks a color based off the time -->
+            window.onload = function() {
+                const hour = new Date().getHours();
+                let backgroundColor;
+                if (hour >= 6 && hour < 12) {
+                    backgroundColor = "#FFE993";
+                } else if (hour >= 12 && hour < 18) {
+                    backgroundColor = "#FFD412";
+                } else if (hour >= 18 && hour < 21) {
+                    backgroundColor = "#FFAE00";
+                } else {
+                    backgroundColor = "#8D6FBF";
+                }
+                document.body.style.backgroundColor = backgroundColor;
+            };
+        </script>
+    </head>
+    <body>
+        <h2> Welcome to my Dynamic Webpage!</h2>
+        <ul>
+            <li>My name is Killian Green.</li>
+            <li>I am a computer science and political science double major.</li>
+            <li>This is for course COP 4813, Web Applications Programming.</li>
+        </ul>
+    </body>
+</html>
